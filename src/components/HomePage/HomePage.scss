@@ -1,0 +1,94 @@
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+
+@import '../variables.scss';
+
+.HomePage-container {
+  margin: 0 auto;
+  text-align:center; 
+  padding-top: 100px; 
+  max-width: $max-content-width;
+}
+
+.HomePage-container:after{
+    content: "";
+    clear: both;
+    display:table; 
+}
+
+.HomePage-ContentItem {
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display:inline-block;
+    min-height: 250px; 
+    width: 30%;
+    margin: 1.15%;
+    text-align:left; 
+    opacity:.95;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    
+    p {
+        padding:0;
+        margin:0;
+        max-width: 175px; 
+        font-size: 14px; 
+        line-height: 17px; 
+        color:black;
+        font-weight: 600;
+    }
+
+    &:hover{
+    opacity: 1;
+    }
+
+}
+
+.HomePage-ContentItem--1{
+    width: 20%;
+    margin-top: 12%;
+}
+
+.HomePage-ContentItem--2{
+    width: 60%;
+}
+
+.HomePage-ContentItem--3{
+    width: 25%;
+}
+
+.HomePage-ContentItem--4{
+    width: 30%;
+    margin-right:10%;
+    margin-left:10%;
+}
+
+.HomePage-ContentItem--5{
+    width: 45%;
+}
+
+.HomePage-ContentItem--6{
+    width: 40%;
+}
+
+.HomePage-ContentImage{
+    width:100%;
+}
+
+.HomePage-ContentImage{
+    margin-bottom: 15px; 
+}
+
+.HomePage-contentTitle{
+    color: $brand-color-purple; 
+    font-size: 2.5rem;
+    line-height: 3.0rem;
+    text-decoration: underline;
+    font-weight: 200;
+    margin: 0 0 15px 0;
+    padding: 0;
+}
+
+
