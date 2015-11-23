@@ -24,6 +24,11 @@ class Link extends Component {
     let allowTransition = true;
     let clickResult;
 
+    // close any open popup modals on click of a link
+    (function(){
+      AppActions.displayPopup('None'); 
+    })();
+
     if (this.props && this.props.onClick) {
       clickResult = this.props.onClick(event);
     }
