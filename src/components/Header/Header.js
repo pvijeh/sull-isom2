@@ -1,27 +1,36 @@
 /*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
 
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './Header.scss';
 import withStyles from '../../decorators/withStyles';
 import Link from '../Link';
-import Navigation from '../Navigation';
+import AppDispatcher from '../../core/Dispatcher';
+import AppActions from '../../actions/appActions';
+import AppStore from '../../stores/appStore';
+import http from '../../core/HttpClient';
+import $ from 'jquery'; 
 
 @withStyles(styles)
-class Header extends Component {
+class Header extends React.Component{
 
+onNavClick = event => {
+  AppActions.displayPopup(event);
+
+  if (typeof window !=="undefined" && this.props.DropDownMenuType == "push"){ 
+    $('html, body').animate({
+      scrollTop: 0
+    },300); 
+  }
+}
+
+  
   render() {
     return (
       <div className="Header">
         <div className="Header-container">
-          <a className="Header-brand" href="/" onClick={Link.handleClick}>
-            <img className="Header-brandImg" src={require('./logo-small.png')} width="38" height="38" alt="React" />
-            <span className="Header-brandTxt">Your Company</span>
-          </a>
-          <Navigation className="Header-nav" />
-          <div className="Header-banner">
-            <h1 className="Header-bannerTitle">React</h1>
-            <p className="Header-bannerDesc">Complex web apps made easy</p>
-          </div>
+            <p className="Header-branding">SULLIVAN</p>
+            <a className="Header-icon Header-icon--right fa fa-search" onClick={this.onNavClick.bind(this, 'Search')}></a>
+            <a className="Header-icon Header-icon--left fa fa-bars" onClick={this.onNavClick.bind(this, 'Navigation')}></a>
         </div>
       </div>
     );
@@ -30,3 +39,5 @@ class Header extends Component {
 }
 
 export default Header;
+
+

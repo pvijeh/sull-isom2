@@ -2,49 +2,62 @@
 
 @import '../variables.scss';
 
-$brand-color: #61dafb;
-
 .Header {
-  background: #373277;
+  background: #FF5000;
   color: #fff;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index: 5;
+  width:100%;
+  opacity: 1;
+}
+
+.Header-branding{
+    float: left;
+    margin: 0 3%;
+    font-size: 30px;
+    line-height: 50px;
+    height: 40px;
+    padding: 0;
+}
+
+.Header a{
+  color:white;
+  underline: none;
+  text-decoration: none;
 }
 
 .Header-container {
+  width:96%;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 0 3%;
   max-width: $max-content-width;
 }
 
-.Header-brand {
-  color: color($brand-color lightness(+10%));
-  text-decoration: none;
-  font-size: 1.75em; /* ~28px */
+.Header-icon{
+  height: 40px;
+  width: 40px; 
+  line-height: 40px;
+  font-size: 30px; 
+  padding:0;
+  margin: 5px;
+  text-align:center;
+  cursor:pointer;
 }
 
-.Header-brandTxt {
-  margin-left: 10px;
+.Header-icon--left{
+  float:left;
 }
 
-.Header-nav {
-  float: right;
-  margin-top: 6px;
+.Header-icon--right{
+ float:right; 
 }
 
-.Header-banner {
-  text-align: center;
-}
-
-.Header-bannerTitle {
-  margin: 0;
-  padding: 10px;
-  font-weight: normal;
-  font-size: 4em;
-  line-height: 1em;
-}
-
-.Header-bannerDesc {
-  padding: 0;
-  color: rgba(255, 255, 255, .5);
-  font-size: 1.25em;
-  margin: 0;
+.testButton{
+  background-color:red;
+  cursor:pointer;
+  height: 60px;
+  width: 60px; 
+  margin:auto;
 }
