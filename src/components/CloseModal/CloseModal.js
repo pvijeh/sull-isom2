@@ -15,7 +15,7 @@ import AppStore from '../../stores/appStore';
 class CloseModal extends React.Component{
 
   onCloseModalClick = event => {
-  // AppActions.displayPopup(event);
+  AppActions.displayPopup(event);
 }
 
   static propTypes = {

@@ -166,3 +166,50 @@ textarea {
     page-break-after: avoid;
   }
 }
+
+.App-Popup--fade-enter {
+  opacity: 0.01;
+  transition: opacity .3s ease-in;
+}
+
+.App-Popup--fade-enter.App-Popup--fade-enter-active {
+  opacity: 1;
+}
+
+.App-Popup--fade-leave {
+  opacity: 1;
+  transition: opacity .3s ease-in;
+}
+
+.App-Popup--fade-leave.App-Popup--fade-leave-active {
+  opacity: 0.01;
+}
+
+.App-Popup--push-enter {
+  margin-top: -90vh;
+  transition: .3s ease;
+}
+
+.App-Popup--push-enter.App-Popup--push-enter-active {
+  margin-top: 0;
+}
+
+.App-Popup--push-leave {
+  margin-top: 0;
+  transition:  .3s ease;
+}
+
+.App-Popup--push-leave.App-Popup--push-leave-active {
+  margin-top: -90vh;
+}
+
+
+
+
+
+
+
+
+
+
+
