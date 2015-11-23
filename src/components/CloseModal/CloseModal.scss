@@ -1,0 +1,20 @@
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+
+@import '../variables.scss';
+
+.CloseModal-wrapper {
+    height: 40px;
+    width: 40px;
+    line-height: 30px;
+    font-size: 40px;
+    padding: 0;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+    float: right; 
+    color: $brand-color-purple;  
+    position: relative;
+    z-index:5;
+    border-radius: 50%;
+    background-color: white;
+}
