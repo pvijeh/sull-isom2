@@ -14,8 +14,9 @@ import ErrorPage from './components/ErrorPage';
 
 // custom components 
 import HomePage from './components/HomePage'; 
-import CloseModal from './components/CloseModal'
-
+import CloseModal from './components/CloseModal'; 
+import Search from './components/Search'; 
+import Navigation from './components/Navigation'; 
 
 const router = new Router(on => {
   on('*', async (state, next) => {
@@ -30,6 +31,10 @@ const router = new Router(on => {
   on('/', async () => <HomePage />);
 
   on('/closemodal', async () => <CloseModal />);
+
+  on('/nav', async () => <Navigation />);
+
+  on('/search', async () => <Search />);
 
   on('/register', async () => <RegisterPage />);
 
