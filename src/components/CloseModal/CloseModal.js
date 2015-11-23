@@ -6,9 +6,9 @@ import styles from './CloseModal.scss';
 import withStyles from '../../decorators/withStyles';
 import Link from '../Link';
 
-// import AppDispatcher from '../../core/Dispatcher';
-// import AppActions from '../../actions/appActions';
-// import AppStore from '../../stores/appStore';
+import AppDispatcher from '../../core/Dispatcher';
+import AppActions from '../../actions/appActions';
+import AppStore from '../../stores/appStore';
 
 @withStyles(styles)
 
