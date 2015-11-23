@@ -7,16 +7,17 @@ import http from './core/HttpClient';
 // boilerplate included components 
 import App from './components/App';
 import ContentPage from './components/ContentPage';
-import LoginPage from './components/LoginPage';
+
 import RegisterPage from './components/RegisterPage';
 import NotFoundPage from './components/NotFoundPage';
 import ErrorPage from './components/ErrorPage';
 
-// custom components 
+// // custom components 
 import HomePage from './components/HomePage'; 
-import CloseModal from './components/CloseModal'; 
-import Search from './components/Search'; 
-import Navigation from './components/Navigation'; 
+// import CloseModal from './components/CloseModal'; 
+// import Search from './components/Search'; 
+// import Navigation from './components/Navigation'; 
+import CaseStudy from './components/CaseStudy'; 
 
 const router = new Router(on => {
   on('*', async (state, next) => {
@@ -26,15 +27,9 @@ const router = new Router(on => {
 
   on('/contact', async () => <ContactPage />);
 
-  on('/contact', async () => <ContactPage />);
+    on('/work/*', async () => <CaseStudy />);
 
   on('/', async () => <HomePage />);
-
-  on('/closemodal', async () => <CloseModal />);
-
-  on('/nav', async () => <Navigation />);
-
-  on('/search', async () => <Search />);
 
   on('/register', async () => <RegisterPage />);
 
