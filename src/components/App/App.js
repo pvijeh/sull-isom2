@@ -19,6 +19,16 @@ let getPopupState = function() {
   };   
 };
 
+class TestComp extends React.Component {
+  render(){
+    return(
+        <div className="TestCompStyle">
+        stuff stuff stuff
+        </div>
+      )
+  }
+}
+
 @withContext
 @withStyles(styles)
 class App extends React.Component {
@@ -43,18 +53,19 @@ componentWillMount () {
 
   // show popup on page load 
   if (ExeNv.canUseDOM == true && this.state.DropDownMenuType == "push" ){
-    setTimeout(function(){
+
+  //   setTimeout(function(){
       
-      this.setState({
-        popupState: 'Search'
-      })
+  //     this.setState({
+  //       popupState: 'Search'
+  //     })
 
-        // scroll to top of window 
-        $('html, body').animate({
-          scrollTop: 0
-        },300); 
+  //       // scroll to top of window 
+  //       $('html, body').animate({
+  //         scrollTop: 0
+  //       },300); 
 
-    }.bind(this), 4000); 
+  //   }.bind(this), 4000); 
   
   }
 
@@ -102,7 +113,7 @@ componentWillMount () {
           <TransitionGroup transitionName={'App-Popup--'+this.state.DropDownMenuType} transitionEnterTimeout={1000} transitionLeaveTimeout={1000}>
             {popUpContent}
           </TransitionGroup>
-        {this.props.children}
+            {this.props.children}
         <div className="App-DropDownSelector">
           <label>
               <input type="radio" name=" displayType" onChange={this.handleDropSelectorChange.bind(this, "fade")}/>
@@ -118,5 +129,9 @@ componentWillMount () {
   }
 
 }
+
+// {this.props.children}
+
+
 
 export default App;

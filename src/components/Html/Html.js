@@ -29,6 +29,7 @@ class Html extends Component {
   }
 
   render() {
+
     return (
       <html className="no-js" lang="">
       <head>

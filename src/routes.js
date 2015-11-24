@@ -7,29 +7,28 @@ import http from './core/HttpClient';
 // boilerplate included components 
 import App from './components/App';
 import ContentPage from './components/ContentPage';
-
 import RegisterPage from './components/RegisterPage';
 import NotFoundPage from './components/NotFoundPage';
 import ErrorPage from './components/ErrorPage';
 
 // // custom components 
 import HomePage from './components/HomePage'; 
-// import CloseModal from './components/CloseModal'; 
-// import Search from './components/Search'; 
-// import Navigation from './components/Navigation'; 
 import CaseStudy from './components/CaseStudy'; 
 
 const router = new Router(on => {
+
   on('*', async (state, next) => {
     const component = await next();
-    return component && <App context={state.context}>{component}</App>;
+    return component && <App context={state.context}>
+        {component}
+    </App>;
   });
 
   on('/contact', async () => <ContactPage />);
 
-    on('/work/*', async () => <CaseStudy />);
+    on('/work/*', async () => <CaseStudy /> );
 
-  on('/', async () => <HomePage />);
+  on('/', async () =>  <HomePage /> );
 
   on('/register', async () => <RegisterPage />);
 
