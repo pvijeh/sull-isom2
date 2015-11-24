@@ -10,6 +10,8 @@ import Search from '../Search';
 import AppStore from '../../stores/appStore'; 
 import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 import $ from 'jquery'; 
+import ExeNv from 'exenv'; 
+
 
 let getPopupState = function() {
   return {
@@ -26,7 +28,6 @@ constructor (props) {
       popupState: 'none', 
       DropDownMenuType : 'push'
     }
-
     this.changePopupState = this.changePopupState.bind(this);
   }
 
@@ -37,8 +38,27 @@ constructor (props) {
     })
 }
 
+
 componentWillMount () {
   AppStore.addChangeListener(this.changePopupState);
+
+  // show popup on page load 
+  if (ExeNv.canUseDOM == true && this.state.DropDownMenuType == "push" ){
+    setTimeout(function(){
+      
+      this.setState({
+        popupState: 'Search'
+      })
+
+        // scroll to top of window 
+        $('html, body').animate({
+          scrollTop: 0
+        },300); 
+
+    }.bind(this), 4000); 
+  
+  }
+
 }
 
   componentWillUnmount() {
