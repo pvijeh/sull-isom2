@@ -167,6 +167,24 @@ textarea {
   }
 }
 
+.App-DropDownSelector{
+  position: fixed; 
+  bottom: 20px; 
+  background-color: #999;
+  width: 400px; 
+  left: 50%;
+  margin-left: -200px; 
+  border: 2px solid #444; 
+  text-align:center;
+
+  label{
+    margin: 10px 10px; 
+  }
+  input {
+    margin: 0 10px;
+  }
+}
+
 .App-Popup--fade-enter {
   opacity: 0.01;
   transition: opacity .3s ease-in;
