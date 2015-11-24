@@ -38,7 +38,6 @@ constructor (props) {
     })
 }
 
-
 componentWillMount () {
   AppStore.addChangeListener(this.changePopupState);
 
