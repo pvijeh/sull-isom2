@@ -87,7 +87,7 @@ function unbindScrollEvents(){
 }
 
 @withStyles(styles)
-class LoginPage extends Component {
+class CaseStudy extends Component {
 
   static contextTypes = {
     onSetTitle: PropTypes.func.isRequired,
@@ -194,4 +194,4 @@ class LoginPage extends Component {
 
 }
 
-export default LoginPage;
+export default CaseStudy;
