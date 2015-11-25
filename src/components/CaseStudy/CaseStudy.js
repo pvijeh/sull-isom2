@@ -98,6 +98,8 @@ class CaseStudy extends Component {
             if (ExeNv.canUseDOM){ 
             singlePageScrolling();
             console.log(this.props.content);
+
+            console.log(this.props.content.meta.case_study_slides);
         }
     }
 
