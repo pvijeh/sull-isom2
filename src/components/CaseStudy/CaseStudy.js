@@ -4,11 +4,12 @@ import React, { PropTypes, Component } from 'react';
 import styles from './CaseStudy.scss';
 import $ from 'jquery'; 
 import withStyles from '../../decorators/withStyles';
+import ExeNv from 'exenv'; 
 
 // function to create full page scrolling effect
 function singlePageScrolling (){
 
-    if (typeof window !=="undefined"){ 
+    if (ExeNv.canUseDOM){
 
         $('.js--onePageScroll').addClass('js--onePageScroll--jsActive'); 
 
@@ -94,18 +95,21 @@ class CaseStudy extends Component {
   };
 
   componentDidMount(){
-        if (typeof window !=="undefined"){ 
+            if (ExeNv.canUseDOM){ 
             singlePageScrolling();
+            console.log(this.props.content);
         }
     }
 
     componentWillUnmount(){
-        if (typeof window !=="undefined"){ 
+        if (ExeNv.canUseDOM){ 
             unbindScrollEvents(); 
         }
     }
 
   render() {
+
+
 
     return (
         <div className="js--onePageScroll">

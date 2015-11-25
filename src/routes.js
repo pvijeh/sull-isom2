@@ -24,9 +24,12 @@ const router = new Router(on => {
     </App>;
   });
 
-  on('/contact', async () => <ContactPage />);
+  on('/work/*', async () => {
+      const content = await http.get(`http://sullivan-public-website.dev/wp-json/posts/211`);
+      return content && <CaseStudy content={content} />;
+  });
 
-    on('/work/*', async () => <CaseStudy /> );
+  on('/contact', async () => <ContactPage />);
 
   on('/', async () =>  <HomePage /> );
 
